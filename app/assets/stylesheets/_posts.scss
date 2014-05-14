@@ -1,0 +1,23 @@
+.post {
+  @include outer-container;
+  color: $font-color;
+}
+
+.post-body {
+  @include shift(1);
+  @include span-columns(10);
+  margin-bottom: 2em;
+}
+
+.post-title {
+  font-family: 'Questrial', sans-serif;
+  font-size: 2.0em;
+  margin-bottom: .25em;
+}
+
+.post-date {
+  color: transparentize($font-color, 0.5);
+  font-size: .8em;
+  font-family: sans-serif;
+  margin-bottom: 0.5em;
+}
