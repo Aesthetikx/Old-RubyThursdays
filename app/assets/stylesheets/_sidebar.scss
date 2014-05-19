@@ -12,4 +12,13 @@ div.sidebar {
 
 div#sidebar {
   margin: 2em;
+  header {
+    margin-right: 0;
+    .title {
+      font-size: 1.8em;
+      #ruby, #thursdays {
+        opacity: 0;
+      }
+    }
+  }
 }

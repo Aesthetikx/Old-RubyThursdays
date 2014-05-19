@@ -3,7 +3,6 @@
 <head>
   <title>RubyThursdays</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
@@ -12,6 +11,16 @@
   <div class="sidebar">
     <%= render "shared/sidebar" %>
   </div>
+
+  <header>
+    <div class="title">
+      <em>Ruby</em>Thursdays
+    </div>
+
+    <div class="tagline">
+      Robots Build Robots
+    </div>
+  </header>
 
 <%= yield %>
 
