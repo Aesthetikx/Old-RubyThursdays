@@ -48,3 +48,6 @@ gem 'will_paginate'
 
 gem 'bourbon'
 gem 'neat'
+
+gem 'devise'
+gem 'activeadmin', github: 'gregbell/active_admin'
