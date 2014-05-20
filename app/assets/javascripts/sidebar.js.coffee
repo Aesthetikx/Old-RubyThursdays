@@ -10,8 +10,8 @@ jQuery ->
     if thursdaysOpacity > 1.0
       thursdaysOpacity = 1.0
 
-    ruby = $('div#sidebar header div.title span#ruby')
-    thursdays = $('div#sidebar header div.title span#thursdays')
+    ruby = $('header div.title span#ruby')
+    thursdays = $('header div.title span#thursdays')
 
     ruby.css({opacity: rubyOpacity})
     thursdays.css({opacity: thursdaysOpacity})

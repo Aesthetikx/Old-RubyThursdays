@@ -1,6 +1,9 @@
 header {
   text-align: center;
-  margin-right: 25%;
+
+  @media screen and (min-width: 700px) {
+    margin-right: 25%;
+  }
 
   .title {
     font-size: 3em;

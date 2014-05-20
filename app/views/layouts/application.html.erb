@@ -5,12 +5,12 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link rel="stylesheet" href="http://yandex.st/highlightjs/8.0/styles/railscasts.min.css">
+  <script src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <meta name="viewport" content="width=device-width, user-scalable=no">
 </head>
 <body>
-
-  <div class="sidebar">
-    <%= render "shared/sidebar" %>
-  </div>
 
   <header>
     <div class="title">
@@ -22,7 +22,11 @@
     </div>
   </header>
 
-<%= yield %>
+  <div class="sidebar">
+    <%= render "shared/sidebar" %>
+  </div>
+
+  <%= yield %>
 
 </body>
 </html>
