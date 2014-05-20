@@ -1,5 +1,8 @@
 .post {
-  @include outer-container;
+  padding: 0.5em;
+  @media screen and (min-width: 700px) {
+    @include outer-container;
+  }
 }
 
 .post-body {
@@ -37,5 +40,4 @@
   @media screen and (min-width: 700px) {
     margin-right: 25%;
   }
-
 }
