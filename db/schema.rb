@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140520005631) do
+ActiveRecord::Schema.define(version: 20140521174010) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -55,6 +55,21 @@ ActiveRecord::Schema.define(version: 20140520005631) do
     t.date     "date"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "cached_slug"
   end
+
+  add_index "posts", ["cached_slug"], name: "index_posts_on_cached_slug", using: :btree
+
+  create_table "slugs", force: true do |t|
+    t.string   "scope"
+    t.string   "slug"
+    t.integer  "record_id"
+    t.datetime "created_at"
+  end
+
+  add_index "slugs", ["scope", "record_id", "created_at"], name: "index_slugs_on_scope_and_record_id_and_created_at", using: :btree
+  add_index "slugs", ["scope", "record_id"], name: "index_slugs_on_scope_and_record_id", using: :btree
+  add_index "slugs", ["scope", "slug", "created_at"], name: "index_slugs_on_scope_and_slug_and_created_at", using: :btree
+  add_index "slugs", ["scope", "slug"], name: "index_slugs_on_scope_and_slug", using: :btree
 
 end

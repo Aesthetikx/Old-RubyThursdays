@@ -51,3 +51,5 @@ gem 'neat'
 
 gem 'devise'
 gem 'activeadmin', github: 'gregbell/active_admin'
+
+gem 'slugged'

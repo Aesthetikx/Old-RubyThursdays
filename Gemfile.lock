@@ -98,6 +98,8 @@ GEM
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
     libv8 (3.16.14.3)
+    macaddr (1.7.1)
+      systemu (~> 2.6.2)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
@@ -171,6 +173,10 @@ GEM
     sdoc (0.4.0)
       json (~> 1.8)
       rdoc (~> 4.0, < 5.0)
+    slugged (2.0.0)
+      activerecord (>= 3.0)
+      activesupport (>= 3.0)
+      uuid
     spring (1.1.3)
     sprockets (2.11.0)
       hike (~> 1.2)
@@ -181,6 +187,7 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (~> 2.8)
+    systemu (2.6.4)
     therubyracer (0.12.1)
       libv8 (~> 3.16.14.0)
       ref
@@ -197,6 +204,8 @@ GEM
     uglifier (2.5.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    uuid (2.3.7)
+      macaddr (~> 1.0)
     warden (1.2.3)
       rack (>= 1.0)
     will_paginate (3.0.5)
@@ -219,6 +228,7 @@ DEPENDENCIES
   rspec-rails
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
+  slugged
   spring
   therubyracer
   turbolinks

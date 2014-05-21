@@ -6,6 +6,7 @@ ActiveAdmin.register Post do
     f.inputs "Details" do
       f.input :title
       f.input :body
+      f.input :cached_slug
       f.input :date, :as => :datepicker
     end
 

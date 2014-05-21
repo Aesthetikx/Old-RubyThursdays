@@ -4,7 +4,8 @@ Rails.application.routes.draw do
 
   ActiveAdmin.routes(self)
 
-  resources :posts, only: [:index, :show]
+  get 'posts/' => 'posts#index', :as => :posts
+  get 'posts/:slug' => 'posts#show', :as => :post
 
   root to: 'posts#index'
 
