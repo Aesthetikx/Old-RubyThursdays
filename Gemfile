@@ -53,3 +53,5 @@ gem 'devise'
 gem 'activeadmin', github: 'gregbell/active_admin'
 
 gem 'slugged'
+
+gem 'acts-as-taggable-on'
