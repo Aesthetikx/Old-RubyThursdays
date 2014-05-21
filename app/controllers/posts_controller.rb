@@ -4,6 +4,10 @@ class PostsController < ApplicationController
                            per_page: params[:per_page]
                           ).order('date DESC')
 
+    if params[:tag]
+      @posts = @posts.tagged_with(params[:tag])
+    end
+
     respond_to do |format|
       format.html
       format.js
@@ -12,6 +16,11 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find_using_slug params[:slug]
+  end
+
+  def tag_cloud
+    @tags = Post.tag_counts_on(:tags)
+    render partial: 'shared/tag_cloud'
   end
 
 end

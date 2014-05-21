@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
 
   get 'posts/' => 'posts#index', :as => :posts
+  get 'posts/tags' => 'posts#tag_cloud', :as => :tag_cloud
   get 'posts/:slug' => 'posts#show', :as => :post
 
   root to: 'posts#index'

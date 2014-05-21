@@ -4,6 +4,14 @@
 
   <div class="post-date"><%= human_date post.date %></div>
 
+  <div class="post-tags">
+    <% post.tags.each do |tag| %>
+      <span class="tag">
+        <%= link_to "##{tag.name}", posts_path(tag: tag.name) %>
+      </span>
+    <% end %>
+  </div>
+
   <div class="post-body"><%= post.body.html_safe %></div>
 
 </div>
