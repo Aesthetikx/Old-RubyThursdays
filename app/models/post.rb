@@ -4,6 +4,6 @@ class Post < ActiveRecord::Base
 
   is_sluggable :title, editable: true
 
-  self.primary_key = :cached_slug
+  acts_as_taggable
 
 end
