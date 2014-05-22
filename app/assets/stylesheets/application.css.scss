@@ -16,9 +16,18 @@ $max-width: 960px;
 
 $font-color: rgb(50, 50, 50);
 
-a, a:link, a:visited, a:hover, a:active {
-  color: #F00;
+$link-color: rgb(255, 0, 0);
+
+a {
   text-decoration: none;
+  transition: 0.4s;
+  &:link, &:visited, &:active {
+    color: transparentize($link-color, 0.5);
+  }
+
+  &:hover {
+    color: $link-color;
+  }
 }
 
 body {

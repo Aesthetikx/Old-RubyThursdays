@@ -3,6 +3,14 @@ div.sidebar {
   color: #FFF;
   font-family: 'Source Sans Pro', sans-serif;
 
+  a:link, a:visited, a:active {
+    color: transparentize($link-color, 0.3);
+
+    &:hover {
+      color: $link-color;
+    }
+  }
+
   header {
     .title {
       font-size: 1.8em;
