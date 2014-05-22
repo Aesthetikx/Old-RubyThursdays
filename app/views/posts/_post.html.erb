@@ -2,15 +2,15 @@
 
   <h2 class="post-title"><%= link_to post.title, post %></h2>
 
-  <div class="post-date"><%= human_date post.date %></div>
+  <span class="post-date"><%= human_date post.date %></span>
 
-  <div class="post-tags">
+  <span class="post-tags">
     <% post.tags.each do |tag| %>
       <span class="tag">
         <%= link_to "##{tag.name}", posts_path(tag: tag.name) %>
       </span>
     <% end %>
-  </div>
+  </span>
 
   <div class="post-body"><%= post.body.html_safe %></div>
 
