@@ -4,11 +4,27 @@
   </div>
 </header>
 
-<h3>John DeSilva</h3>
-
-<a href="http://www.github.com/Aesthetikx/">GitHub.com/Aesthetikx</a>
+<table class="info-table">
+  <tr>
+    <td rowspan="2">
+      <%= image_tag gravatar_url("desilvjo@umich.edu"), class: "gravatar" %>
+    </td>
+    <td>
+      John DeSilva
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="http://www.github.com/Aesthetikx/">GitHub.com/Aesthetikx</a>
+    </td>
+  </tr>
+</table>
 
 <h4 class="tag-cloud-title">Tags</h4>
-<div class="tag-cloud"/>
+<div class="tag-cloud"></div>
+
+<div class="bottom-info">
+  <%= link_to "View this repo on GitHub", "https://www.github.com/Aesthetikx/RubyThursdays" %>
+</div>
 
 </div>

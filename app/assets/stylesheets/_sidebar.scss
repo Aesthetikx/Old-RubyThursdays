@@ -5,48 +5,56 @@ div.sidebar {
 
   a:link, a:visited, a:active {
     color: transparentize($link-color, 0.3);
-
-    &:hover {
-      color: $link-color;
+    &:hover { 
+      color: $link-color; 
     }
-  }
-
-  .tag-cloud-title {
-    margin-bottom: 0.2em;
   }
 
   header {
     .title {
       font-size: 1.8em;
-      #ruby, #thursdays {
-        opacity: 0;
+      #ruby, #thursdays { 
+        opacity: 0; 
       }
     }
+    margin: 1em;
+  }
+
+  .gravatar {
+    border-radius: 6px;
+  }
+
+  .info-table td {
+    vertical-align: top;
+  }
+
+  .bottom-info {
+    font-size: 0.8em;
+    text-align: center;
+    margin: 1em;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
   }
 
   /* Large screen */
   @media screen and (min-width: 700px) {
-    .title {
-      display: block;
-    }
+    .title { display: block; }
     position: fixed;
     top: 0px;
     bottom: 0px;
     right: 0px;
     width: 275px;
-    padding: 2em;
+    padding: 1em;
   }
 
   /* Small screen */
   @media screen and (max-width: 700px) {
+    .title { display: none; }
+    .bottom-info { display: none; }
     width: 100%;
-    .title {
-      display: none;
-    }
     padding: 1em;
-    h3 {
-      margin: 0;
-    }
   }
 
 }
