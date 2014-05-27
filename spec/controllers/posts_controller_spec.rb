@@ -42,14 +42,25 @@ describe PostsController do
       expect(assigns(:posts)).to eq(posts)
     end
 
+    it 'does not return posts from the future' do
+      FactoryGirl.create_list(:post, 5)
+      FactoryGirl.create(:post, date: Time.now + 5.hours)
+
+      get :index, per_page: 10
+
+      assigns(:posts).each do |post|
+        expect(post.date).to be < Time.now
+      end
+    end
+
   end
 
-  describe 'GET /posts/:id/show' do
+  describe 'GET /posts/:slug/show' do
 
     it 'populates @post' do
       post = FactoryGirl.create(:post)
 
-      get :show, id: post.id
+      get :show, slug: post.cached_slug
 
       expect(assigns(:post)).not_to be_nil
       expect(assigns(:post).title).to eq post.title
