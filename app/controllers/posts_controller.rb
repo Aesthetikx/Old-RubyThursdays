@@ -1,7 +1,8 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.current.paginate(page: params[:page],
-                           per_page: params[:per_page]
+    @posts = Post.published.current.paginate(
+                            page: params[:page],
+                            per_page: params[:per_page]
                           ).order('date DESC')
 
     if params[:tag]
@@ -15,7 +16,7 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.current.find_using_slug params[:slug]
+    @post = Post.published.current.find_using_slug params[:slug]
   end
 
   def tag_cloud

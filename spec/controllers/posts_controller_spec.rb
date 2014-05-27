@@ -53,6 +53,17 @@ describe PostsController do
       end
     end
 
+    it 'does not return unpublished posts' do
+      FactoryGirl.create(:post, published: true)
+      FactoryGirl.create(:post, published: false)
+
+      get :index, per_page: 10
+
+      assigns(:posts).each do |post|
+        expect(post.published).to be true
+      end
+    end
+
   end
 
   describe 'GET /posts/:slug/show' do

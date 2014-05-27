@@ -1,6 +1,6 @@
 ActiveAdmin.register Post do
 
-  permit_params :title, :body, :date, :tag_list
+  permit_params :title, :body, :date, :tag_list, :published
 
   index do
     column :id
@@ -9,6 +9,7 @@ ActiveAdmin.register Post do
       link_to post.cached_slug, post
     end
     column :date
+    column :published
 
     actions
   end
@@ -23,6 +24,7 @@ ActiveAdmin.register Post do
       end
       row :date
       row :tag_list
+      row :published
     end
   end
 
@@ -33,6 +35,7 @@ ActiveAdmin.register Post do
       f.input :cached_slug
       f.input :date, :as => :datepicker
       f.input :tag_list
+      f.input :published
     end
 
     f.actions
