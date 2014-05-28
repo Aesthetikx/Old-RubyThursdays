@@ -16,6 +16,14 @@ header {
     }
   }
 
+  a:link, a:active, a:visited {
+    color: #000;
+  }
+
+  a:hover {
+    color: #F00;
+  }
+
   .tagline {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 0.8em;
