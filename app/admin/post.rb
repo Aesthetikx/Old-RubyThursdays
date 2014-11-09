@@ -43,7 +43,7 @@ ActiveAdmin.register Post do
 
   controller do
     def resource
-      Post.where(cached_slug: params[:id]).first!
+      Post.where(cached_slug: params[:id]).first || Post.new
     end
   end
 
